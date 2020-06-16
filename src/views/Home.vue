@@ -38,7 +38,7 @@
     </b-container>
     <b-container fluid>
       <b-row>
-        <b-col class="p-5" sm="5" offset="1">
+        <b-col class="p-5 mb-5" sm="5" offset="1">
           <h2
             style="text-align:left; 
               font-weight: 800;"
@@ -53,9 +53,9 @@
             build their own culinary business… Read More
           </p>
         </b-col>
-        <b-col class="chef" sm="3">
+        <b-col class="chef" sm="2">
           <img
-            style="height: 500px;  transform: rotate(-25deg);
+            style="height: 500px;  
             margin-top: -160px;"
             src="@/assets/image-30.png"
           />
@@ -66,13 +66,24 @@
       <b-row class="p-5">
         <b-col sm="12"><h4 style="">BestSelling Experiences</h4></b-col>
       </b-row>
+      <!-- <b-container class=""> -->
       <b-row>
-        <b-col>1</b-col>
-        <b-col>2</b-col>
-        <b-col>3</b-col>
-        <b-col>4</b-col>
+        <b-col sm="3" class="experiences"
+          ><img src="@/assets/image-6.png"
+        /></b-col>
+        <b-col sm="3" class="experiences"
+          ><img src="@/assets/image-6.png"
+        /></b-col>
+        <b-col sm="3" class="experiences"
+          ><img src="@/assets/image-6.png"
+        /></b-col>
+        <b-col sm="3" class="experiences"
+          ><img src="@/assets/image-6.png"
+        /></b-col>
       </b-row>
+      <!-- </b-container> -->
     </b-container>
+    <Experiences />
   </div>
 </template>
 
@@ -80,10 +91,11 @@
 // @ is an alias to /src
 import ImageHeader from "@/components/ImageHeader.vue";
 import DiningEvents from "@/components/DiningEvents.vue";
+import Experiences from "@/components/Experiences.vue";
 
 export default {
   name: "Home",
-  components: { ImageHeader, DiningEvents },
+  components: { ImageHeader, DiningEvents, Experiences },
   data() {
     return {
       add: require("@/assets/dining-3.jpg"),
@@ -115,12 +127,18 @@ export default {
 
 <style>
 .chef {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon;
   z-index: 0;
-  height: 300px;
+  height: 250px;
   transform: rotate(25deg);
-  border-radius: 50px;
+  border-radius: 50px; */
 }
+
+.experiences {
+  /* background-color: white; */
+  padding: 0px !important;
+}
+
 .bestselling h4 {
   font-weight: bold;
   text-transform: uppercase;
@@ -129,7 +147,6 @@ export default {
 .bestselling {
   padding-top: 40px;
   background: #f4f5f7;
-  height: 500px;
   z-index: 100;
   position: relative;
 }

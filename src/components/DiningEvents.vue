@@ -1,7 +1,11 @@
 <template>
   <b-col class="d-md-flex" sm="12">
-    <b-col v-for="content in contents" :key="content['content']" sm="4">
-      <!-- <h1>{{ content["content"] }}</h1> -->
+    <b-col
+      v-for="content in contents"
+      :key="content['content']"
+      class="events"
+      sm="4"
+    >
       <div class="red-flash"><i class="fa fa-flash"></i></div>
       <div class="lightning-content">
         <p>{{ content["content"] }}</p>
@@ -62,5 +66,8 @@ export default {
 
 .lightning {
   padding-top: 80px;
+}
+.events {
+  margin-bottom: 20px;
 }
 </style>
