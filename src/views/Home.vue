@@ -36,6 +36,39 @@
         </b-row>
       </b-container>
     </b-container>
+    <b-container fluid>
+      <b-row>
+        <b-col class="p-5" sm="5" offset="1">
+          <h2
+            style="text-align:left; 
+              font-weight: 800;"
+          >
+            Carefully curated <br />
+            flavours by leading Chef <br />
+            Yeo Kian Tiong &#8594;
+          </h2>
+          <p style="text-align:left">
+            With Esseplore, Chef KT handpicks some of <br />
+            Singapore’s best home cooks and help them to<br />
+            build their own culinary business… Read More
+          </p>
+        </b-col>
+        <b-col class="chef" sm="3">
+          <!-- <img style="z-index:0;" src="@/assets/image-32.jpg" /> -->
+          <img
+            style="height: 500px;  transform: rotate(-25deg);
+            margin-top: -160px;"
+            src="@/assets/image-30.png"
+          />
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container fluid class="bestselling">
+      <b-row class="p-5">
+        <b-col sm="12"><h4 style="">BestSelling Experiences</h4></b-col>
+      </b-row>
+      <b-row></b-row>
+    </b-container>
   </div>
 </template>
 
@@ -77,6 +110,26 @@ export default {
 </script>
 
 <style>
+.chef {
+  background-color: lightsalmon;
+  z-index: 0;
+  height: 300px;
+  transform: rotate(25deg);
+  border-radius: 50px;
+}
+.bestselling h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.bestselling {
+  padding-top: 40px;
+  background: #f4f5f7;
+  height: 500px;
+  z-index: 100;
+  position: relative;
+}
+
 .dining-events {
   background: #f4f5f7;
   padding-bottom: 150px;
