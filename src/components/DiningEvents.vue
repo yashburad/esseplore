@@ -1,17 +1,31 @@
 <template>
-  <b-col class="d-md-flex" sm="12">
-    <b-col
-      v-for="content in contents"
-      :key="content['content']"
-      class="events"
-      sm="4"
-    >
-      <div class="red-flash"><i class="fa fa-flash"></i></div>
-      <div class="lightning-content">
-        <p>{{ content["content"] }}</p>
-      </div>
-      <img style="width:100%" :src="content['url']" alt="abc" /> </b-col
-  ></b-col>
+  <b-container>
+    <b-row class="lightning">
+      <b-col class="d-flex" sm="12">
+        <b-col style="text-align:left;" sm="4"
+          ><h4>Lightning Dining Events</h4></b-col
+        ><b-col sm="4"></b-col>
+        <b-col sm="4"
+          ><h6 class="mt-2">
+            Last few hours before these events vanish
+          </h6></b-col
+        ></b-col
+      >
+      <b-col class="d-md-flex" sm="12">
+        <b-col
+          v-for="content in contents"
+          :key="content['content']"
+          class="events"
+          sm="4"
+        >
+          <div class="red-flash"><i class="fa fa-flash"></i></div>
+          <div class="lightning-content">
+            <p>{{ content["content"] }}</p>
+          </div>
+          <img style="width:100%" :src="content['url']" alt="abc" /> </b-col
+      ></b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>

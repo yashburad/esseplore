@@ -8,33 +8,17 @@
             <b-datepicker class="mr-sm-4 calendar" placeholder="">
               <label style="width:170px;"></label>
             </b-datepicker>
-
             <b-input-group class=" mb-2 mr-sm-4 mb-sm-0">
               <b-input
                 id="guest inline-form-input-username"
                 placeholder=""
               ></b-input>
             </b-input-group>
-
             <b-button class="search">Search</b-button>
           </b-form>
         </b-col>
       </b-row>
-      <b-container>
-        <b-row class="lightning">
-          <b-col class="d-flex" sm="12">
-            <b-col style="text-align:left;" sm="4"
-              ><h4>Lightning Dining Events</h4></b-col
-            ><b-col sm="4"></b-col>
-            <b-col sm="4"
-              ><h6 class="mt-2">
-                Last few hours before these events vanish
-              </h6></b-col
-            ></b-col
-          >
-          <DiningEvents :contents="diningevents" />
-        </b-row>
-      </b-container>
+      <DiningEvents :contents="diningevents" />
     </b-container>
     <b-container fluid>
       <b-row>
@@ -61,27 +45,6 @@
           />
         </b-col>
       </b-row>
-    </b-container>
-    <b-container fluid class="bestselling">
-      <b-row class="p-5">
-        <b-col sm="12"><h4 style="">BestSelling Experiences</h4></b-col>
-      </b-row>
-      <!-- <b-container class=""> -->
-      <b-row>
-        <b-col sm="3" class="experiences"
-          ><img src="@/assets/image-6.png"
-        /></b-col>
-        <b-col sm="3" class="experiences"
-          ><img src="@/assets/image-6.png"
-        /></b-col>
-        <b-col sm="3" class="experiences"
-          ><img src="@/assets/image-6.png"
-        /></b-col>
-        <b-col sm="3" class="experiences"
-          ><img src="@/assets/image-6.png"
-        /></b-col>
-      </b-row>
-      <!-- </b-container> -->
     </b-container>
     <Experiences />
   </div>
@@ -134,31 +97,9 @@ export default {
   border-radius: 50px; */
 }
 
-.experiences {
-  /* background-color: white; */
-  padding: 0px !important;
-}
-
-.bestselling h4 {
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.bestselling {
-  padding-top: 40px;
-  background: #f4f5f7;
-  z-index: 100;
-  position: relative;
-}
-
 .dining-events {
   background: #f4f5f7;
   padding-bottom: 150px;
-}
-
-.btn-secondary {
-  background-color: #ff6480 !important;
-  padding: 10px;
 }
 
 .bi-calendar {
@@ -171,6 +112,8 @@ export default {
 
 .search {
   border-radius: 5% !important;
+  background-color: #ff6480 !important;
+  padding: 10px;
 }
 .guest {
   border-radius: 5% !important;
