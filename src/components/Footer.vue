@@ -73,8 +73,11 @@ footer {
   }
 }
 
-.footer {
+.footer .row {
   padding: 40px 0px 40px 40px;
+}
+
+.footer {
   text-align: left;
   color: #9e9ea1;
 }

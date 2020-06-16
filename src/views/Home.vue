@@ -54,7 +54,6 @@
           </p>
         </b-col>
         <b-col class="chef" sm="3">
-          <!-- <img style="z-index:0;" src="@/assets/image-32.jpg" /> -->
           <img
             style="height: 500px;  transform: rotate(-25deg);
             margin-top: -160px;"
@@ -67,7 +66,12 @@
       <b-row class="p-5">
         <b-col sm="12"><h4 style="">BestSelling Experiences</h4></b-col>
       </b-row>
-      <b-row></b-row>
+      <b-row>
+        <b-col>1</b-col>
+        <b-col>2</b-col>
+        <b-col>3</b-col>
+        <b-col>4</b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
