@@ -76,9 +76,10 @@ export default {};
 }
 .explore-more {
   margin-top: 40px;
+  margin-bottom: 80px;
+
   background-color: #929dbb !important;
   border-color: #929dbb !important;
-
   padding: 10px 40px 10px 40px !important;
   letter-spacing: 1px;
 }
