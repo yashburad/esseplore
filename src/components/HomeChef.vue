@@ -2,12 +2,12 @@
   <b-container fluid class="homechefs">
     <b-row
       ><b-col sm="6" style="padding-left:25px;"
-        ><h2 style="font-style:italic; margin-bottom:40px;">
+        ><h2 style="font-style:italic; margin-bottom:-20px;">
           HomeChefs For Hire Near You
         </h2></b-col
       ></b-row
     >
-    <b-row
+    <b-row style="position:relative; top:60px;"
       ><b-col sm="5" offset-md="1" class="mb-3"
         ><div class="homechef-content">
           <p>Robert Kini</p>
@@ -69,6 +69,6 @@ export default {
 .homechefs {
   background-color: #f4f5f7;
   padding: 100px 15px 0px 15px;
-  box-shadow: 0px 14px #f4f5f7;
+  box-shadow: 0px 14px 18px 9px rgba(0, 0, 0, 0.2);
 }
 </style>

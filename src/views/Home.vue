@@ -49,6 +49,7 @@
     <Experiences />
     <HireAChef :background="style" :url="this.hire" />
     <HomeChef />
+    <ExploreCuisines />
   </div>
 </template>
 
@@ -59,10 +60,18 @@ import DiningEvents from "@/components/DiningEvents.vue";
 import Experiences from "@/components/Experiences.vue";
 import HireAChef from "@/components/HireAChef.vue";
 import HomeChef from "@/components/HomeChef.vue";
+import ExploreCuisines from "@/components/ExploreCuisines.vue";
 
 export default {
   name: "Home",
-  components: { ImageHeader, DiningEvents, Experiences, HireAChef, HomeChef },
+  components: {
+    ImageHeader,
+    DiningEvents,
+    Experiences,
+    HireAChef,
+    HomeChef,
+    ExploreCuisines,
+  },
   data() {
     return {
       add: require("@/assets/dining-3.jpg"),
