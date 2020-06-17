@@ -12,16 +12,19 @@
         ><div class="homechef-content">
           <p>Robert Kini</p>
         </div>
-        <img
-          style="width:100%"
-          src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"/></b-col
-      ><b-col sm="5" class="mb-3"
+        <div class="crop1">
+          <img style="width:100%" src="@/assets/dining-3.jpg" />
+        </div>
+      </b-col>
+      <b-col sm="5" class="mb-3"
         ><div class="homechef-content">
           <p>Robert Kini</p>
         </div>
-        <img
-          style="width:100%"
-          src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"/></b-col
+        <div class="crop1">
+          <img
+            style="width:100%"
+            src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"
+          /></div></b-col
     ></b-row>
   </b-container>
 </template>
@@ -37,6 +40,14 @@ export default {
 </script>
 
 <style>
+.crop1 {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+.crop1 img {
+}
+
 .homechef-content {
   position: absolute;
   top: 60%;
@@ -52,7 +63,7 @@ export default {
 }
 @media screen and (max-width: 1200px) {
   .homechef-content {
-    width: 93%;
+    width: 92%;
   }
 }
 
@@ -62,7 +73,7 @@ export default {
   width: 70%;
   text-align: left;
   margin-left: 5%;
-  margin-top: 20%;
+  margin-top: 15%;
   font-weight: bold;
 }
 

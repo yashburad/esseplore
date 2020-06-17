@@ -3,7 +3,7 @@
     <b-row class="lightning">
       <b-col class="d-flex" sm="12">
         <b-col style="text-align:left;" sm="4"
-          ><h4>Lightning Dining Events</h4></b-col
+          ><h4 style="font-weight:bold;">Lightning Dining Events</h4></b-col
         ><b-col sm="4"></b-col>
         <b-col sm="4"
           ><h6 class="mt-2">

@@ -33,7 +33,7 @@ export default {
 .hire {
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 800px;
 }
 
 .chef {
@@ -57,6 +57,7 @@ export default {
   font-size: 16px;
   line-height: 1.7;
   letter-spacing: -0.19px;
+  padding: 0px 20px;
 }
 
 .hire-chef h1 {
