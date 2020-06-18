@@ -39,10 +39,10 @@
           <table class="table">
             <thead>
               <tr>
-                <th style="text-align:left">Description</th>
-                <th scope="col">Rate</th>
-                <th scope="col">Quantity</th>
-                <th scope="col" style="text-align:right;">Price</th>
+                <th style="text-align:left; width:40%;">Description</th>
+                <th scope="col" style="width:15%;">Rate</th>
+                <th scope="col" style="width:20%;">Quantity</th>
+                <th scope="col" style="text-align:right;width:20%">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -241,6 +241,18 @@
 @media screen and (min-width: 992px) {
   .price {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu h4 {
+    padding-left: 15px !important;
+  }
+  .menu h5 {
+    padding-left: 15px !important;
+  }
+  .menu h6 {
+    padding-left: 15px !important;
   }
 }
 
