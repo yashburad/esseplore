@@ -5,6 +5,7 @@ import Bazaar from "../views/Bazaar.vue";
 import Explore from "../views/Explore.vue";
 import HomeDining from "../views/HomeDining.vue";
 import SignUp from "../views/SignUp.vue";
+import Summary from "../views/Summary.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/signup",
     name: "SignUp",
     component: SignUp,
+  },
+  {
+    path: "/summary",
+    name: "Summary",
+    component: Summary,
   },
 ];
 

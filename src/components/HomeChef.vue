@@ -46,6 +46,7 @@ export default {
   overflow: hidden;
 }
 .crop1 img {
+  height: 100%;
 }
 
 .homechef-content {
