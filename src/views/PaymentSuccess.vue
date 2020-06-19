@@ -129,7 +129,7 @@ export default {
 
 .payment-details {
   background: white;
-  margin: 0px 10px !important;
+  margin: 0px 25px 10px 5px !important;
   border-radius: 5px;
   color: black;
   position: absolute;
