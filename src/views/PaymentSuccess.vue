@@ -6,9 +6,7 @@
           <b-col class="payment-box" sm="10" offset-md="1">
             <h3>Your Home Chef is confirmed!</h3>
             <h6>Your Home Chef is getting ready to audit your venue.</h6>
-          </b-col>
-          <b-col class="experience-code" sm="10" offset-md="1"
-            ><b-row class="payment-details">
+            <b-row class="payment-details">
               <b-col class="image" sm="5">
                 <img
                   style="width:100%"
@@ -40,15 +38,21 @@
                 </div>
               </b-col>
             </b-row>
-            <b-col sm="1"></b-col>
+          </b-col>
+          <b-col class="experience-code" sm="10" offset-md="1">
             <b-col sm="12">
-              <h6>Your Experience Code</h6>
+              <h6 class="code">Your Experience Code</h6>
               <h6>
                 Keep this code handy before the event and share it with your
                 Home Chef on their arrival.
               </h6>
-            </b-col></b-col
-          >
+              <div class="mt-2 code1">
+                <h2>GHX3</h2>
+                <span>SHARE CODE</span>
+              </div>
+              <button class="continue-browsing">CONTINUE BROWSING</button>
+            </b-col>
+          </b-col>
         </b-row>
         <b-row> </b-row>
       </b-container>
@@ -67,9 +71,34 @@ export default {
 </script>
 
 <style>
+.continue-browsing {
+  background: #ee617e;
+  color: white;
+  border: none;
+  padding: 20px 40px 20px 40px;
+  margin-bottom: -100px;
+}
 .experience-code {
-  background-image: linear-gradient(to bottom, #ffffff 7%, #e8eaf0 123%);
-  height: 300px;
+  background: linear-gradient(to bottom, #ffffff 7%, #e8eaf0 123%);
+  padding-top: 100px;
+  /* height: 300px; */
+}
+.experience-code .code1 {
+  color: #ff6480;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.experience-code .code {
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .experience-code {
+    padding-top: 300px;
+  }
 }
 
 .location {
@@ -103,9 +132,8 @@ export default {
   margin: 0px 10px !important;
   border-radius: 5px;
   color: black;
-  position: inherit;
-  margin-top: 100px;
-  top: -35%;
+  position: absolute;
+  z-index: 100;
   box-shadow: 0 4px 6px 0 rgba(12, 20, 61, 0.06);
 }
 
@@ -122,5 +150,6 @@ export default {
 
 .payment-success {
   background: rgba(0, 0, 0, 0.11);
+  padding-bottom: 120px;
 }
 </style>
