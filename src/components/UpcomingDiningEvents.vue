@@ -1,10 +1,10 @@
 <template>
-  <b-container style="padding-top:80px;">
+  <b-container>
     <b-row class="lightning1">
       <b-col class="d-flex" sm="12">
-        <b-col style="text-align:left;" sm="4">
+        <b-col style="text-align:left;" sm="5">
           <h4 style="font-weight:bold;letter-spacing:1px;font-weight:200;">
-            Hire A Chef Menu
+            Upcoming Home Dining Events
           </h4>
         </b-col>
       </b-col>
@@ -29,12 +29,17 @@
               <p>Local Asian Fusion Dinner in Singapore</p>
             </div>
             <div class="content1">
-              <span style="font-size:19px;">S$100/pax</span>
-              <h6>4 to 8 pax</h6>
+              <span style="font-size:19px;">S$100</span>
+              <h6 class="per-guest">per guest</h6>
             </div>
           </div>
           <div class="m-2" style="text-align:left">
-            <p><i class="fa fa-calendar"></i> 8 Oct 2020 - 24 Oct 2020</p>
+            <p>
+              <i class="fa fa-calendar"></i> 8 Oct 2020
+              <span style="float:right"
+                ><i class="fa fa-clock-o"></i>6:30 PM - 8:30 PM</span
+              >
+            </p>
           </div>
         </b-col></b-col
       >
@@ -53,6 +58,18 @@ export default {
 </script>
 
 <style>
+.top-box {
+  padding-bottom: 20px;
+}
+
+.fa-clock-o {
+  margin-right: 10px;
+}
+.per-guest {
+  color: #929dbb;
+  font-size: 12px;
+}
+
 .image .dish {
   padding: 10px;
 }

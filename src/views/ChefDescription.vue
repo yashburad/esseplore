@@ -29,8 +29,11 @@
         </b-col>
       </b-row>
     </b-container>
-    <HireChefMenu />
-    <Carousel />
+    <b-container fluid style="background:#f4f5f7">
+      <HireChefMenu :contents="diningevents" />
+      <UpcomingDiningEvents :contents="diningevents" />
+    </b-container>
+    <!-- <Carousel /> -->
   </div>
 </template>
 
@@ -38,18 +41,32 @@
 // @ is an alias to /src
 import ImageHeader from "@/components/ImageHeader.vue";
 import HireChefMenu from "@/components/HireChefMenu.vue";
-import Carousel from "@/components/Carousel.vue";
+import UpcomingDiningEvents from "@/components/UpcomingDiningEvents.vue";
+
+// import Carousel from "@/components/Carousel.vue";
 
 export default {
   name: "ChefDescription",
   components: {
     ImageHeader,
     HireChefMenu,
-    Carousel,
+    UpcomingDiningEvents,
+    // Carousel,
   },
   data() {
     return {
       add: require("@/assets/dining-3.jpg"),
+      diningevents: [
+        {
+          url: require("@/assets/dining-3.jpg"),
+        },
+        {
+          url: require("@/assets/dining-3.jpg"),
+        },
+        {
+          url: require("@/assets/dining-3.jpg"),
+        },
+      ],
     };
   },
   methods: {

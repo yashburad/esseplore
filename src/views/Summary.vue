@@ -316,7 +316,7 @@ th {
 .booking-summary h5 {
   margin-bottom: 0px !important;
 }
-.fa-calendar {
+.schedule .fa-calendar {
   margin-right: 20px;
 }
 .schedule {
