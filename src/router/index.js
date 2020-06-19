@@ -7,6 +7,7 @@ import HomeDining from "../views/HomeDining.vue";
 import SignUp from "../views/SignUp.vue";
 import Summary from "../views/Summary.vue";
 import ChefDescription from "../views/ChefDescription.vue";
+import PaymentSuccess from "../views/PaymentSuccess.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: "/chefdescription",
     name: "ChefDescription",
     component: ChefDescription,
+  },
+  {
+    path: "/paymentsuccess",
+    name: "PaymentSuccess",
+    component: PaymentSuccess,
   },
 ];
 

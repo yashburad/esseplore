@@ -19,6 +19,17 @@
           <b-nav-item>
             <router-link to="/bazaar">Bazaar</router-link></b-nav-item
           >
+          <b-nav-item>
+            <router-link to="/chefdescription"
+              >chefdescription</router-link
+            ></b-nav-item
+          ><b-nav-item>
+            <router-link to="/summary">summary</router-link></b-nav-item
+          ><b-nav-item>
+            <router-link to="/paymentsuccess"
+              >paymentsuccess</router-link
+            ></b-nav-item
+          >
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
