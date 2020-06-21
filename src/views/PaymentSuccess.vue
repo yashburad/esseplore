@@ -15,9 +15,7 @@
                 <img class="chef-photo1" src="@/assets/dsc-1405@3x.png" />
               </b-col>
               <b-col class="details" sm="7">
-                <div
-                  style="border-bottom:1px solid #dfe0e5; padding-bottom:10px;"
-                >
+                <div style="border-bottom:1px solid #dfe0e5; padding-bottom:10px;">
                   <h5 class="mb-1">Local Asian Fusion Dinner in Singapore</h5>
                   <span style="color:#1b2749;">Chef Martin Yan</span>
                 </div>
@@ -30,10 +28,10 @@
                     <p>
                       <i class="fa fa-map-marker" style="color: #929dbb;"></i>
                     </p>
-                    <span class="location"
-                      >180 Paya Lebar Road #07-06 Yi Guang Factory Building,
-                      409032, Singapore</span
-                    >
+                    <span class="location">
+                      180 Paya Lebar Road #07-06 Yi Guang Factory Building,
+                      409032, Singapore
+                    </span>
                   </div>
                 </div>
               </b-col>
@@ -54,7 +52,7 @@
             </b-col>
           </b-col>
         </b-row>
-        <b-row> </b-row>
+        <b-row></b-row>
       </b-container>
     </b-container>
   </div>
@@ -66,7 +64,7 @@ export default {
   data: function() {
     return {};
   },
-  methods: {},
+  methods: {}
 };
 </script>
 
@@ -149,7 +147,7 @@ export default {
 }
 
 .payment-success {
-  background: rgba(0, 0, 0, 0.11);
+  background: rgba(0, 0, 0, 0.04);
   padding-bottom: 120px;
 }
 </style>

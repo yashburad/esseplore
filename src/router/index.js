@@ -6,6 +6,7 @@ import Explore from "../views/Explore.vue";
 import HomeDining from "../views/HomeDining.vue";
 import SignUp from "../views/SignUp.vue";
 import Summary from "../views/Summary.vue";
+import ChefDetails from "../views/ChefDetails.vue";
 import ChefDescription from "../views/ChefDescription.vue";
 import PaymentSuccess from "../views/PaymentSuccess.vue";
 
@@ -41,6 +42,11 @@ const routes = [
     path: "/summary",
     name: "Summary",
     component: Summary,
+  },
+  {
+    path: "/chefdetails",
+    name: "ChefDetails",
+    component: ChefDetails,
   },
   {
     path: "/chefdescription",

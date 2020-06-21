@@ -1,111 +1,80 @@
 <template>
   <div class="ChefDescription">
     <ImageHeader :add="style(this.add)" />
-    <b-container class="top-box" fluid>
-      <b-row class="page-direction">
-        <b-col sm="11" offset-md="1">
-          <span style="color:#575757;">
-            <i class="fa fa-home"></i> > Dining Experience >
-          </span>
-          Chef Martin Yan
+    <b-container class="pt-5">
+      <b-row class="p-4 p-sm-0" style>
+        <b-col sm="8">
+          <b-row class="page-direction">
+            <span style="color:#575757;">
+              <i class="fa fa-home"></i> > Hire A Chef >
+            </span>
+            Chef Shirley Goh
+          </b-row>
+          <b-row class="d-block text-left">
+            <h5 class="food-type mt-3">Lunch</h5>
+            <h3 class="font-weight-bold mt-2">Local Asian Fusion Dinner</h3>
+            <p>
+              {{this.description}}…
+              <button @click="readmore" class="read-more">Read More ...</button>
+            </p>
+            <div>
+              <button class="chef-cuisine">MALAY</button>
+              <button class="chef-cuisine ml-3">PERANAKAN</button>
+            </div>
+          </b-row>
         </b-col>
-      </b-row>
-      <b-row class="chef-details">
-        <b-col sm="2" offset-md="1"
-          ><img class="chef-photo" src="@/assets/dsc-1405.jpg" />
-        </b-col>
-        <b-col class="chef-details1" sm="9"
-          ><h4>Chef Shirley Gos</h4>
-          <p>
-            Celebrity Chef. TV Show Host. Founder of Yan Can Cooking School
-          </p>
-          <span
-            >Yan began teaching Chinese cooking for a college extension program.
-            He has hosted over 1,500 episodes of the PBS cooking show Yan Can
-            Cook since 1982. Yan began teaching Chinese cooking for a college
-            extension program. He has hosted over 1,500 episodes of the PBS
-            cooking show Yan Can Cook since 1982.</span
-          >
-        </b-col>
+        <b-col sm="4"></b-col>
       </b-row>
     </b-container>
-    <b-container fluid style="background:#f4f5f7">
-      <HireChefMenu :contents="diningevents" />
-      <UpcomingDiningEvents :contents="diningevents" />
-    </b-container>
-    <!-- <Carousel /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import ImageHeader from "@/components/ImageHeader.vue";
-import HireChefMenu from "@/components/HireChefMenu.vue";
-import UpcomingDiningEvents from "@/components/UpcomingDiningEvents.vue";
-
-// import Carousel from "@/components/Carousel.vue";
 
 export default {
   name: "ChefDescription",
   components: {
-    ImageHeader,
-    HireChefMenu,
-    UpcomingDiningEvents,
+    ImageHeader
+
     // Carousel,
   },
   data() {
     return {
       add: require("@/assets/dining-3.jpg"),
-      diningevents: [
-        {
-          url: require("@/assets/dining-3.jpg"),
-        },
-        {
-          url: require("@/assets/dining-3.jpg"),
-        },
-        {
-          url: require("@/assets/dining-3.jpg"),
-        },
-      ],
+      description:
+        "Singaporean classics infused with love and tender care in sourcing as well as process. Chef Yan cuts no corners, from vegetables hand-cut to the perfect thickness to arduously"
     };
   },
   methods: {
     style(add) {
       var style = 'background-image: url("' + add + '")';
       return style;
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
-.top-box {
-  box-shadow: 0 1.5px 28px 0 rgba(0, 0, 0, 0.16);
-}
+<style lang="sass">
+.ChefDescription
+    .page-direction
+        padding-bottom: 20px
+        border-bottom: solid 0.5px rgba(224, 224, 224, 0.44)
+    .food-type
+        color: #ff6480
 
-.chef-details {
-  text-align: left;
-}
-
-.chef-details1 {
-  padding-top: 40px;
-}
-
-.chef-details1 span {
-  /* color: antiquewhite; */
-  font-weight: 300;
-}
-
-.chef-photo {
-  height: 250px;
-}
-
-.background {
-  height: 350px !important;
-}
-
-.page-direction {
-  padding-top: 40px;
-  text-align: left;
-}
+    .chef-cuisine
+        color: #ff6480
+        border: none
+        padding: 5px 20px
+        border-radius: 2px
+        background: rgba(255, 100, 128, 0.12)
+    .read-more
+        border: none
+        background: transparent
+        color: #ff6480
+        padding: 0px
+        &:hover
+            text-decoration: underline
 </style>

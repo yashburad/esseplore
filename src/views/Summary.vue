@@ -1,8 +1,8 @@
 <template>
   <div class="summary">
     <b-container fluid class="booking-summary">
-      <b-row
-        ><b-col sm="3" offset="1" style="padding: 15px 0px 15px 0px;">
+      <b-row>
+        <b-col sm="3" offset="1" style="padding: 15px 0px 15px 0px;">
           <h5>
             <i class="fa fa-arrow-left" aria-hidden="true"></i> Booking Summary
           </h5>
@@ -20,12 +20,8 @@
               />
             </b-col>
             <b-col sm="9" style="text-align:left;">
-              <h4 style="text-align:left;font-weight:bold;">
-                Local Asian Fusion Dinner in Singapore
-              </h4>
-              <p muted style="color:rgba(27, 39, 73, 0.54);">
-                Chef Shirley Goh
-              </p>
+              <h4 style="text-align:left;font-weight:bold;">Local Asian Fusion Dinner in Singapore</h4>
+              <p muted style="color:rgba(27, 39, 73, 0.54);">Chef Shirley Goh</p>
               <p class="schedule">
                 <i class="fa fa-calendar" aria-hidden="true"></i> 8 Oct 2020 -
                 24 Oct 2020
@@ -48,30 +44,26 @@
             <tbody>
               <tr class="first-row" style="margin-top:100px;">
                 <td class="d-flex" style="text-align:left">
-                  <h5><i class="fa fa-user"></i> Pax</h5>
+                  <h5>
+                    <i class="fa fa-user"></i> Pax
+                  </h5>
                 </td>
                 <td scope="col" style="color:#ff6480; font-size:24px;">
                   <!-- <div class="d-flex" style="text-align:center;"> -->
-                  <p><sup>S$</sup>100</p>
+                  <p>
+                    <sup>S$</sup>100
+                  </p>
                   <!-- </div> -->
                 </td>
-                <td scope="col" style="">
+                <td scope="col" style>
                   <h4>
                     {{ quantity }}
                     <button
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    >-</button>
+                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -79,36 +71,34 @@
                 </td>
               </tr>
               <tr class="menu" style="text-align:left;">
-                <td colspan="4"><h4 style="padding-left:40px;">Menu</h4></td>
+                <td colspan="4">
+                  <h4 style="padding-left:40px;">Menu</h4>
+                </td>
               </tr>
               <tr class="menu" style="text-align:left;">
                 <td colspan="4">
-                  <h5 class="menu-content">
-                    APPETIZER
-                  </h5>
+                  <h5 class="menu-content">APPETIZER</h5>
                   <h6 style="padding-left:40px;">TOFU SATAY</h6>
                 </td>
               </tr>
               <tr class="menu" style="text-align:left;">
                 <td colspan="4">
-                  <h5 class="menu-content">
-                    MAIN COURSE
-                  </h5>
+                  <h5 class="menu-content">MAIN COURSE</h5>
                   <h6 style="padding-left:40px;">TOFU SATAY</h6>
                 </td>
               </tr>
               <tr class="menu" style="text-align:left;">
                 <td colspan="4">
-                  <h5 class="menu-content">
-                    DESSERT
-                  </h5>
+                  <h5 class="menu-content">DESSERT</h5>
                   <h6 style="padding-left:40px;">TOFU SATAY</h6>
                 </td>
               </tr>
               <tr class="first-row" style="margin-top:100px;">
                 <td colspan="3" class="d-flex" style="text-align:left">
                   <h5 @click="toggle">
-                    <i class="fa"><img src="@/assets/group-2612.svg"/></i> Wine
+                    <i class="fa">
+                      <img src="@/assets/group-2612.svg" />
+                    </i> Wine
                     &#9662;
                   </h5>
                 </td>
@@ -124,33 +114,25 @@
               >
                 <td class="d-flex" style="text-align:left">
                   <div>
-                    <h5 class="menu-content">
-                      APPETIZER
-                    </h5>
+                    <h5 class="menu-content">APPETIZER</h5>
                     <h6 style="padding-left:40px;">TOFU SATAY</h6>
                   </div>
                 </td>
 
                 <td scope="col" style="color:#ff6480; font-size:24px;">
-                  <p><sup>S$</sup>100</p>
+                  <p>
+                    <sup>S$</sup>100
+                  </p>
                 </td>
-                <td scope="col" style="">
+                <td scope="col" style>
                   <h4>
                     {{ quantity }}
                     <button
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    >-</button>
+                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -169,33 +151,25 @@
               >
                 <td class="d-flex" style="text-align:left">
                   <div>
-                    <h5 class="menu-content">
-                      APPETIZER
-                    </h5>
+                    <h5 class="menu-content">APPETIZER</h5>
                     <h6 style="padding-left:40px;">TOFU SATAY</h6>
                   </div>
                 </td>
 
                 <td scope="col" style="color:#ff6480; font-size:24px;">
-                  <p><sup>S$</sup>100</p>
+                  <p>
+                    <sup>S$</sup>100
+                  </p>
                 </td>
-                <td scope="col" style="">
+                <td scope="col" style>
                   <h4>
                     {{ quantity }}
                     <button
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    >-</button>
+                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -207,20 +181,23 @@
               <tr>
                 <td colspan="3"></td>
                 <!-- <td></td>
-                <td></td> -->
+                <td></td>-->
                 <td style="text-align:right;">
-                  <p>Total : <span class="price">S$284</span></p>
+                  <p>
+                    Total :
+                    <span class="price">S$284</span>
+                  </p>
                 </td>
               </tr>
             </tbody>
           </table>
         </b-col>
       </b-row>
-      <b-row
-        ><b-col sm="3" offset="9"
-          ><button class="summary-next">NEXT</button></b-col
-        ></b-row
-      >
+      <b-row>
+        <b-col sm="3" offset="9">
+          <button class="summary-next">NEXT</button>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -346,7 +323,7 @@ export default {
   data() {
     return {
       show: false,
-      quantity: 1,
+      quantity: 1
     };
   },
   methods: {
@@ -355,7 +332,7 @@ export default {
     },
     toggle() {
       this.show = !this.show;
-    },
-  },
+    }
+  }
 };
 </script>
