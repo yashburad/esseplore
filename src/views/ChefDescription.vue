@@ -122,6 +122,21 @@
           </b-row>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col class="text-left">
+          <h4 class="font-weight-bold">NON-ALCOHOLIC BEVERAGES</h4>
+          <p>Lemon Iced Tea, Peach Iced Tea</p></b-col
+        >
+      </b-row>
+      <b-row class="border-bottom">
+        <b-col class="text-left">
+          <h4 class="font-weight-bold">MEAL CLASSIFICATION</h4>
+          <p class="mb-0">
+            <span style="color:#45e69d;">&#10004;</span> Non-Vegetarian
+          </p>
+          <p><span style="color:#45e69d;">&#10004;</span> No Pork</p>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -157,7 +172,7 @@ export default {
 </script>
 <style>
 .ChefDescription .menu {
-  list-style: none;
+  /* list-style: none; */
   line-height: 1.7;
   width: 80%;
 }
