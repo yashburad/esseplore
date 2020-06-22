@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <b-navbar toggleable="lg" type="dark">
       <b-navbar-brand>
         <router-link to="/">
@@ -55,7 +55,7 @@
   /* height: 37.5px; */
 }
 
-a {
+.header a {
   /* font-family: Muli !important; */
   font-family: "Muli", sans-serif;
   font-weight: 500 !important;
@@ -66,7 +66,7 @@ a {
   color: #ffffff !important;
 }
 
-a a:hover {
+.header a a:hover {
   text-decoration: none !important;
   padding-bottom: 5px;
   border-bottom: 1px solid red;

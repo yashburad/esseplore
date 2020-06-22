@@ -20,8 +20,12 @@
               />
             </b-col>
             <b-col sm="9" style="text-align:left;">
-              <h4 style="text-align:left;font-weight:bold;">Local Asian Fusion Dinner in Singapore</h4>
-              <p muted style="color:rgba(27, 39, 73, 0.54);">Chef Shirley Goh</p>
+              <h4 style="text-align:left;font-weight:bold;">
+                Local Asian Fusion Dinner in Singapore
+              </h4>
+              <p muted style="color:rgba(27, 39, 73, 0.54);">
+                Chef Shirley Goh
+              </p>
               <p class="schedule">
                 <i class="fa fa-calendar" aria-hidden="true"></i> 8 Oct 2020 -
                 24 Oct 2020
@@ -44,15 +48,11 @@
             <tbody>
               <tr class="first-row" style="margin-top:100px;">
                 <td class="d-flex" style="text-align:left">
-                  <h5>
-                    <i class="fa fa-user"></i> Pax
-                  </h5>
+                  <h5><i class="fa fa-user"></i> Pax</h5>
                 </td>
                 <td scope="col" style="color:#ff6480; font-size:24px;">
                   <!-- <div class="d-flex" style="text-align:center;"> -->
-                  <p>
-                    <sup>S$</sup>100
-                  </p>
+                  <p><sup>S$</sup>100</p>
                   <!-- </div> -->
                 </td>
                 <td scope="col" style>
@@ -62,8 +62,16 @@
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >-</button>
-                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -98,8 +106,8 @@
                   <h5 @click="toggle">
                     <i class="fa">
                       <img src="@/assets/group-2612.svg" />
-                    </i> Wine
-                    &#9662;
+                    </i>
+                    Wine &#9662;
                   </h5>
                 </td>
               </tr>
@@ -120,9 +128,7 @@
                 </td>
 
                 <td scope="col" style="color:#ff6480; font-size:24px;">
-                  <p>
-                    <sup>S$</sup>100
-                  </p>
+                  <p><sup>S$</sup>100</p>
                 </td>
                 <td scope="col" style>
                   <h4>
@@ -131,8 +137,16 @@
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >-</button>
-                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -157,9 +171,7 @@
                 </td>
 
                 <td scope="col" style="color:#ff6480; font-size:24px;">
-                  <p>
-                    <sup>S$</sup>100
-                  </p>
+                  <p><sup>S$</sup>100</p>
                 </td>
                 <td scope="col" style>
                   <h4>
@@ -168,8 +180,16 @@
                       type="button"
                       @click="change(-1)"
                       class="btn btn-circle btn-sm"
-                    >-</button>
-                    <button type="button" @click="change(1)" class="btn btn-circle btn-sm">+</button>
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -222,13 +242,13 @@
 }
 
 @media screen and (max-width: 992px) {
-  .menu h4 {
+  .summary .menu h4 {
     padding-left: 15px !important;
   }
-  .menu h5 {
+  .summary .menu h5 {
     padding-left: 15px !important;
   }
-  .menu h6 {
+  .summary .menu h6 {
     padding-left: 15px !important;
   }
 }
@@ -250,7 +270,7 @@
   /* margin-top: 15px; */
 }
 
-.menu {
+.summary .menu {
   background: rgba(160, 165, 179, 0.1);
 }
 .btn-circle.btn-sm {
@@ -323,7 +343,7 @@ export default {
   data() {
     return {
       show: false,
-      quantity: 1
+      quantity: 1,
     };
   },
   methods: {
@@ -332,7 +352,7 @@ export default {
     },
     toggle() {
       this.show = !this.show;
-    }
-  }
+    },
+  },
 };
 </script>
