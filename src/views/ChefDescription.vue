@@ -47,7 +47,7 @@
           style="border-bottom:solid 0.5px rgba(224, 224, 224, 0.44);"
         >
           <b-row>
-            <b-col sm="4">
+            <b-col class="mb-4" sm="4">
               <img style="height:200px;" src="@/assets/dsc-1405@3x.png" />
             </b-col>
             <b-col sm="8"
@@ -63,13 +63,14 @@
           </b-row>
         </b-col>
       </b-row>
-      <b-row class="pt-4">
+
+      <b-row class="pt-4 pl-4 pl-sm-0">
         <b-col sm="10">
           <b-row class="text-left mb-4"
             ><h4 class="font-weight-bold">Menu</h4>
           </b-row>
-          <b-row class="text-left ">
-            <b-col class="p-0 " sm="4">
+          <b-row class="text-left  ">
+            <b-col class="p-0 border-right " sm="4">
               <h5>Appetizer</h5>
               <ul class="pl-3 pt-3 menu">
                 <li>
@@ -88,7 +89,7 @@
                 </li>
               </ul>
             </b-col>
-            <b-col class="p-0 " sm="4">
+            <b-col class="border-right" sm="4">
               <h5>Main Course</h5>
               <ul class="pl-3 pt-3 menu">
                 <li>
@@ -107,7 +108,7 @@
                 </li>
               </ul>
             </b-col>
-            <b-col class="p-0 " sm="4">
+            <b-col class=" " sm="4">
               <h5>Dessert</h5>
               <ul class="pl-3 pt-3 menu">
                 <li>
@@ -122,19 +123,92 @@
           </b-row>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col class="text-left">
+
+      <b-row class="pl-2 pl-sm-0 pb-4 border-bottom">
+        <b-col sm="8" class=" text-left ">
+          <h4 class="font-weight-bold">WINE</h4>
+          <b-row>
+            <b-col class="pt-3" sm="8">
+              <b-row class="wine">
+                <b-col class="" sm="3">
+                  <img style="width:25%" src="@/assets/group-2612@3x.png"
+                /></b-col>
+                <b-col class="text-left pl-0" sm="7">
+                  <p class="pt-2">
+                    SAINT EMILION GRAND CRU - Chateau Simard 2009
+                  </p>
+                </b-col>
+                <b-col class="text-left pl-0" sm="2">
+                  <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
+                </b-col>
+              </b-row>
+              <b-row class="wine1">
+                <b-col class="" sm="3">
+                  <img style="width:25%" src="@/assets/group-2612@3x.png"
+                /></b-col>
+                <b-col class="text-left pl-0" sm="7">
+                  <p class="pt-2">
+                    SAINT EMILION GRAND CRU - Chateau Simard 2009
+                  </p>
+                </b-col>
+                <b-col class="text-left pl-0" sm="2">
+                  <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
+                </b-col>
+              </b-row>
+              <b-row class="wine1">
+                <b-col class="" sm="3">
+                  <img style="width:25%" src="@/assets/group-2612@3x.png"
+                /></b-col>
+                <b-col class="text-left pl-0" sm="7">
+                  <p class="pt-2">
+                    SAINT EMILION GRAND CRU - Chateau Simard 2009
+                  </p>
+                </b-col>
+                <b-col class="text-left pl-0" sm="2">
+                  <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
+                </b-col>
+              </b-row>
+            </b-col>
+            <b-col sm="4" class="text-center">
+              <img style="width:30%" src="@/assets/group-2612@3x.png" />
+              <p class="text-left pt-3">
+                A blend of 80% Merlot and 20% Cabernet Franc. The wine is fresh
+                and well balanced with supple texture, lots of pretty red fruit
+                and a good vein of acidity.
+              </p>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+
+      <b-row class="pt-4 pl-2 pl-sm-0">
+        <b-col sm="9" class=" text-left border-bottom">
           <h4 class="font-weight-bold">NON-ALCOHOLIC BEVERAGES</h4>
           <p>Lemon Iced Tea, Peach Iced Tea</p></b-col
         >
       </b-row>
-      <b-row class="border-bottom">
-        <b-col class="text-left">
+
+      <b-row class="pt-4 pl-2 pl-sm-0">
+        <b-col sm="9" class="text-left border-bottom">
           <h4 class="font-weight-bold">MEAL CLASSIFICATION</h4>
           <p class="mb-0">
             <span style="color:#45e69d;">&#10004;</span> Non-Vegetarian
           </p>
           <p><span style="color:#45e69d;">&#10004;</span> No Pork</p>
+        </b-col>
+      </b-row>
+
+      <b-row class="pt-4 pl-2 pl-sm-0">
+        <b-col sm="9" class=" text-left border-bottom">
+          <p class="mb-0" style="color:#929db8">CANCELLATION POLICY</p>
+          <ReadMore class="pt-0" :data="this.description" />
+        </b-col>
+      </b-row>
+
+      <b-row class="pt-4 pb-4 pl-2 pl-sm-0 ">
+        <b-col sm="9" class="border-bottom text-left ">
+          <p class="mb-0" style="color:#929db8">PLEASE NOTE</p>
+          No smoking. No pets allowed.
         </b-col>
       </b-row>
     </b-container>
@@ -172,23 +246,33 @@ export default {
 </script>
 <style>
 .ChefDescription .menu {
-  /* list-style: none; */
   line-height: 1.7;
   width: 80%;
 }
-/* 
-.ChefDescription .menu li::before {
-  content: "•";
-  color: white;
-  border: pink;
-  font-size: 26px;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-} */
 </style>
 <style lang="sass">
 .ChefDescription
+    .border-bottom
+        border-bottom: solid 0.5px rgba(224, 224, 224, 0.34) !important
+
+    .border-right
+        border-right: solid 0.5px rgba(224, 224, 224, 0.34) !important
+    .wine
+        background-image: linear-gradient(to left, rgba(205, 209, 230, 0), rgba(184, 190, 206, 0.17) 25%)
+        border-radius: 5px
+        padding: 25px
+
+        .price
+            font-weight: 100
+            font-size: 26px
+
+    .wine1
+        border-radius: 5px
+        padding: 25px
+
+        .price
+            font-weight: 100
+            font-size: 26px
 
     .lets-book
         background: #ff6480
