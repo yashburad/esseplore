@@ -32,6 +32,9 @@
           <b-nav-item>
             <router-link to="/paymentsuccess">paymentsuccess</router-link>
           </b-nav-item>
+          <b-nav-item>
+            <router-link to="/introduceguests">IntroduceGuests</router-link>
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

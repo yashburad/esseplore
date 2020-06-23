@@ -9,6 +9,7 @@ import Summary from "../views/Summary.vue";
 import ChefDetails from "../views/ChefDetails.vue";
 import ChefDescription from "../views/ChefDescription.vue";
 import PaymentSuccess from "../views/PaymentSuccess.vue";
+import IntroduceGuests from "../views/IntroduceGuests.vue";
 
 Vue.use(VueRouter);
 
@@ -57,6 +58,11 @@ const routes = [
     path: "/paymentsuccess",
     name: "PaymentSuccess",
     component: PaymentSuccess,
+  },
+  {
+    path: "/introduceguests",
+    name: "IntroduceGuests",
+    component: IntroduceGuests,
   },
 ];
 
