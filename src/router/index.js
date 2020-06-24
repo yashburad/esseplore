@@ -18,64 +18,64 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/explore",
     name: "Explore",
-    component: Explore,
+    component: Explore
   },
   {
     path: "/homedining",
     name: "HomeDining",
-    component: HomeDining,
+    component: HomeDining
   },
   {
     path: "/bazaar",
     name: "Bazaar",
-    component: Bazaar,
+    component: Bazaar
   },
   {
     path: "/signup",
     name: "SignUp",
-    component: SignUp,
+    component: SignUp
   },
   {
     path: "/summary",
     name: "Summary",
-    component: Summary,
+    component: Summary
   },
   {
     path: "/chefdetails",
     name: "ChefDetails",
-    component: ChefDetails,
+    component: ChefDetails
   },
   {
     path: "/chefdescription",
     name: "ChefDescription",
-    component: ChefDescription,
+    component: ChefDescription
   },
   {
     path: "/paymentsuccess",
     name: "PaymentSuccess",
-    component: PaymentSuccess,
+    component: PaymentSuccess
   },
   {
     path: "/introduceguests",
     name: "IntroduceGuests",
-    component: IntroduceGuests,
+    component: IntroduceGuests
   },
   {
     path: "/payment",
     name: "Payment",
-    component: Payment,
-  },
+    component: Payment
+  }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
 export default router;
