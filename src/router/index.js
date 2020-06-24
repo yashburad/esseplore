@@ -10,6 +10,7 @@ import ChefDetails from "../views/ChefDetails.vue";
 import ChefDescription from "../views/ChefDescription.vue";
 import PaymentSuccess from "../views/PaymentSuccess.vue";
 import IntroduceGuests from "../views/IntroduceGuests.vue";
+import Payment from "../views/Payment.vue";
 
 Vue.use(VueRouter);
 
@@ -63,6 +64,11 @@ const routes = [
     path: "/introduceguests",
     name: "IntroduceGuests",
     component: IntroduceGuests,
+  },
+  {
+    path: "/payment",
+    name: "Payment",
+    component: Payment,
   },
 ];
 

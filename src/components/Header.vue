@@ -35,6 +35,9 @@
           <b-nav-item>
             <router-link to="/introduceguests">IntroduceGuests</router-link>
           </b-nav-item>
+          <b-nav-item>
+            <router-link to="/payment">Payment</router-link>
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
