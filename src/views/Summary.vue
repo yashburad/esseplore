@@ -1,13 +1,13 @@
 <template>
   <div class="summary">
     <b-container fluid class="booking-summary">
-      <b-row>
-        <b-col sm="3" offset="1" style="padding: 15px 0px 15px 0px;">
-          <h5>
+      <b-container>
+        <b-row class="py-3">
+          <h5 class="p-0 m-0">
             <i class="fa fa-arrow-left" aria-hidden="true"></i> Booking Summary
           </h5>
-        </b-col>
-      </b-row>
+        </b-row>
+      </b-container>
     </b-container>
     <b-container>
       <b-row class="booking-heading">
@@ -35,7 +35,7 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col offset-md="1">
+        <b-col sm="10" offset-md="1">
           <table class="table">
             <thead>
               <tr>
@@ -58,22 +58,20 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <div class="d-flex mt-2">
-                      <button
-                        type="button"
-                        @click="change(-1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        -
-                      </button>
-                      <button
-                        type="button"
-                        @click="change(1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        +
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      @click="change(-1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -125,7 +123,7 @@
                 <td class="d-flex" style="text-align:left">
                   <div>
                     <h5 class="menu-content">APPETIZER</h5>
-                    <h6 style="">TOFU SATAY</h6>
+                    <h6 style="padding-left:40px;">TOFU SATAY</h6>
                   </div>
                 </td>
 
@@ -135,22 +133,20 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <div class="d-flex mt-2">
-                      <button
-                        type="button"
-                        @click="change(-1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        -
-                      </button>
-                      <button
-                        type="button"
-                        @click="change(1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        +
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      @click="change(-1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -169,8 +165,8 @@
               >
                 <td class="d-flex" style="text-align:left">
                   <div>
-                    <h5 class="menu-content pl-sm-0">APPETIZER</h5>
-                    <h6 style="">TOFU SATAY</h6>
+                    <h5 class="menu-content">APPETIZER</h5>
+                    <h6 style="padding-left:40px;">TOFU SATAY</h6>
                   </div>
                 </td>
 
@@ -180,22 +176,20 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <div class="d-flex mt-2">
-                      <button
-                        type="button"
-                        @click="change(-1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        -
-                      </button>
-                      <button
-                        type="button"
-                        @click="change(1)"
-                        class="btn btn-circle btn-sm"
-                      >
-                        +
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      @click="change(-1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      @click="change(1)"
+                      class="btn btn-circle btn-sm"
+                    >
+                      +
+                    </button>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -257,10 +251,6 @@
   .summary .menu h6 {
     padding-left: 15px !important;
   }
-
-  .menu-content {
-    padding-left: 0px !important;
-  }
 }
 
 .wine-table {
@@ -317,7 +307,8 @@ th {
 }
 
 .booking-summary {
-  background-color: rgba(160, 165, 179, 0.2);
+  /* background-color: rgba(160, 165, 179, 0.2); */
+  background-color: #f7f7f9;
 }
 
 .booking-summary h5 {
