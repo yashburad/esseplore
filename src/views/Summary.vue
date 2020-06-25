@@ -58,20 +58,22 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <button
-                      type="button"
-                      @click="change(-1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    <div class="d-flex mt-2">
+                      <button
+                        type="button"
+                        @click="change(-1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        @click="change(1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        +
+                      </button>
+                    </div>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -123,7 +125,7 @@
                 <td class="d-flex" style="text-align:left">
                   <div>
                     <h5 class="menu-content">APPETIZER</h5>
-                    <h6 style="padding-left:40px;">TOFU SATAY</h6>
+                    <h6 style="">TOFU SATAY</h6>
                   </div>
                 </td>
 
@@ -133,20 +135,22 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <button
-                      type="button"
-                      @click="change(-1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    <div class="d-flex mt-2">
+                      <button
+                        type="button"
+                        @click="change(-1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        @click="change(1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        +
+                      </button>
+                    </div>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -165,8 +169,8 @@
               >
                 <td class="d-flex" style="text-align:left">
                   <div>
-                    <h5 class="menu-content">APPETIZER</h5>
-                    <h6 style="padding-left:40px;">TOFU SATAY</h6>
+                    <h5 class="menu-content pl-sm-0">APPETIZER</h5>
+                    <h6 style="">TOFU SATAY</h6>
                   </div>
                 </td>
 
@@ -176,20 +180,22 @@
                 <td scope="col" style>
                   <h4>
                     {{ quantity }}
-                    <button
-                      type="button"
-                      @click="change(-1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      @click="change(1)"
-                      class="btn btn-circle btn-sm"
-                    >
-                      +
-                    </button>
+                    <div class="d-flex mt-2">
+                      <button
+                        type="button"
+                        @click="change(-1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        @click="change(1)"
+                        class="btn btn-circle btn-sm"
+                      >
+                        +
+                      </button>
+                    </div>
                   </h4>
                 </td>
                 <td scope="col" style="text-align:right; font-size:16px;">
@@ -250,6 +256,10 @@
   }
   .summary .menu h6 {
     padding-left: 15px !important;
+  }
+
+  .menu-content {
+    padding-left: 0px !important;
   }
 }
 
