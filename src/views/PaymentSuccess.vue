@@ -15,7 +15,9 @@
                 <img class="chef-photo1" src="@/assets/dsc-1405@3x.png" />
               </b-col>
               <b-col class="details" sm="7">
-                <div style="border-bottom:1px solid #dfe0e5; padding-bottom:10px;">
+                <div
+                  style="border-bottom:1px solid #dfe0e5; padding-bottom:10px;"
+                >
                   <h5 class="mb-1">Local Asian Fusion Dinner in Singapore</h5>
                   <span style="color:#1b2749;">Chef Martin Yan</span>
                 </div>
@@ -48,7 +50,9 @@
                 <h2>GHX3</h2>
                 <span>SHARE CODE</span>
               </div>
-              <button class="continue-browsing">CONTINUE BROWSING</button>
+              <button type="submit" form="my-form" class="continue-browsing">
+                CONTINUE BROWSING
+              </button>
             </b-col>
           </b-col>
         </b-row>
@@ -64,7 +68,7 @@ export default {
   data: function() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

@@ -11,28 +11,40 @@
           </h6></b-col
         ></b-col
       >
+
       <b-col class="d-md-flex" sm="12">
-        <b-col
-          v-for="content in contents"
-          :key="content['content']"
-          class="events"
-          sm="4"
+        <carousel
+          class="w-100"
+          :responsive="{
+            0: { items: 1, nav: false, autoplay: true },
+            600: { items: 3, nav: true },
+          }"
+          :navText="[left, '>']"
         >
-          <div class="red-flash"><i class="fa fa-flash"></i></div>
-          <div class="lightning-content">
-            <p>{{ content["content"] }}</p>
-          </div>
-          <img style="width:100%" :src="content['url']" alt="abc" /> </b-col
-      ></b-col>
+          <b-col
+            v-for="content in contents"
+            :key="content['content']"
+            class="events p-0 pr-2"
+          >
+            <div class="red-flash"><i class="fa fa-flash"></i></div>
+            <div class="lightning-content">
+              <p>{{ content["content"] }}</p>
+            </div>
+            <img style="width:100%" :src="content['url']" alt="abc" /> </b-col
+        ></carousel>
+      </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
+import carousel from "vue-owl-carousel";
+
 export default {
   props: { contents: Array },
+  components: { carousel },
   data: function() {
-    return {};
+    return { left: '<i class="fa fa-angle-left"></i>' };
   },
   methods: {},
 };

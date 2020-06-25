@@ -90,6 +90,14 @@ export default {
           url: require("@/assets/dining-3.jpg"),
           content: "An evening of satays at Singapore’s …",
         },
+        {
+          url: require("@/assets/dining-3.jpg"),
+          content: "An evening of satays  Singapore’s …",
+        },
+        {
+          url: require("@/assets/dining-3.jpg"),
+          content: "An evening of satays at  …",
+        },
       ],
     };
   },

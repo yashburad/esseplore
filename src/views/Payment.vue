@@ -16,7 +16,7 @@
           <b-col class="text-left" sm="7">
             <b-row>
               <b-col sm="12">
-                <b-form>
+                <b-form id="my-form" @submit="onSubmit">
                   <b-form-group
                     id="input-group-2"
                     label="Personal Information"
