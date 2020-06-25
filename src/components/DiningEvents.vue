@@ -99,19 +99,18 @@ export default {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.4) 65%
+    rgba(0, 0, 0, 0.7) 65%
   );
 }
 
 .lightning-content p {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   width: 70%;
   text-align: left;
   margin-left: 5%;
   margin-top: 5%;
   font-weight: bold;
-  font-family: Graphit;
 }
 
 .lightning .col-sm-4 {

@@ -7,39 +7,94 @@
         </h2></b-col
       ></b-row
     >
-    <b-row style="position:relative; top:60px;"
-      ><b-col sm="5" offset-md="1" class="mb-3"
-        ><div class="homechef-content">
-          <p>Robert Kini</p>
-        </div>
-        <div class="crop1">
-          <img style="width:100%" src="@/assets/dining-3.jpg" />
-        </div>
-      </b-col>
-      <b-col sm="5" class="mb-3"
-        ><div class="homechef-content">
-          <p>Robert Kini</p>
-        </div>
-        <div class="crop1">
-          <img
-            style="width:100%"
-            src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"
-          /></div></b-col
-    ></b-row>
+    <b-container>
+      <b-row style="position:relative; top:60px;">
+        <carousel
+          class="w-100"
+          :responsive="{
+            0: { items: 1, nav: false, autoplay: true },
+            600: { items: 2, nav: true, dots: false },
+          }"
+          :navText="[left, right]"
+        >
+          <b-col class="mb-3"
+            ><div class="homechef-content">
+              <p>Robert Kini</p>
+            </div>
+            <div class="crop1">
+              <img
+                style="width:100%"
+                src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"
+              /></div
+          ></b-col>
+          <b-col class="mb-3"
+            ><div class="homechef-content">
+              <p>Robert Kini</p>
+            </div>
+            <div class="crop1">
+              <img
+                style="width:100%"
+                src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"
+              /></div
+          ></b-col>
+          <b-col class="mb-3"
+            ><div class="homechef-content">
+              <p>Robert Kini</p>
+            </div>
+            <div class="crop1">
+              <img
+                style="width:100%"
+                src="@/assets/089-e-3341-a-82-d-324-e-8723-ea-9501-ea-34-dc.jpg"
+              /></div
+          ></b-col>
+        </carousel> </b-row
+    ></b-container>
   </b-container>
 </template>
 
 <script>
+import carousel from "vue-owl-carousel";
+
 export default {
-  props: {},
+  components: { carousel },
   data: function() {
-    return {};
+    return {
+      left: '<i class="fa fa-angle-left"></i>',
+      right: '<i class="fa fa-angle-right"></i>',
+    };
   },
-  methods: {},
 };
 </script>
 
 <style>
+.homechefs .owl-prev {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  left: -5%;
+  font-size: 18px !important;
+  top: 45%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
+.homechefs .owl-next {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  right: -5%;
+  font-size: 18px !important;
+  font-weight: 100;
+  top: 45%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
+
 .crop1 {
   width: 100%;
   max-height: 500px;

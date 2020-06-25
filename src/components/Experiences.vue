@@ -5,62 +5,85 @@
     </b-row>
     <b-container>
       <b-row>
-        <b-col sm="3" class="experiences"
-          ><div class="cards">
-            <div class="crop">
-              <img src="@/assets/image-6.png" />
-            </div>
-            <h6>An evening</h6>
-            <p style="text-align:left;">
-              22 Feb 2020
-              <span style="float:right;">
-                2:00-6:00
-              </span>
-            </p>
-          </div></b-col
+        <carousel
+          class="w-100"
+          :responsive="{
+            0: { items: 1, nav: false, autoplay: true },
+            600: { items: 4, nav: true, dots: false },
+          }"
+          :navText="[left, right]"
         >
-        <b-col sm="3" class="experiences"
-          ><div class="cards">
-            <div class="crop">
-              <img src="@/assets/image-6.png" />
-            </div>
-            <h6>An evening</h6>
-            <p style="text-align:left;">
-              22 Feb 2020
-              <span style="float:right;">
-                2:00-6:00
-              </span>
-            </p>
-          </div></b-col
-        >
-        <b-col sm="3" class="experiences"
-          ><div class="cards">
-            <div class="crop">
-              <img src="@/assets/dining-3.jpg" />
-            </div>
-            <h6>An evening</h6>
-            <p style="text-align:left;">
-              22 Feb 2020
-              <span style="float:right;">
-                2:00-6:00
-              </span>
-            </p>
-          </div></b-col
-        >
-        <b-col sm="3" class="experiences"
-          ><div class="cards">
-            <div class="crop">
-              <img src="@/assets/dining-3.jpg" />
-            </div>
-            <h6>An evening</h6>
-            <p style="text-align:left;">
-              22 Feb 2020
-              <span style="float:right;">
-                2:00-6:00
-              </span>
-            </p>
-          </div></b-col
-        >
+          <b-col class="experiences"
+            ><div class="cards">
+              <div class="crop">
+                <img src="@/assets/image-6.png" />
+              </div>
+              <h6>An evening</h6>
+              <p style="text-align:left;">
+                22 Feb 2020
+                <span style="float:right;">
+                  2:00-6:00
+                </span>
+              </p>
+            </div></b-col
+          >
+          <b-col class="experiences"
+            ><div class="cards">
+              <div class="crop">
+                <img src="@/assets/image-6.png" />
+              </div>
+              <h6>An evening</h6>
+              <p style="text-align:left;">
+                22 Feb 2020
+                <span style="float:right;">
+                  2:00-6:00
+                </span>
+              </p>
+            </div></b-col
+          >
+          <b-col class="experiences"
+            ><div class="cards">
+              <div class="crop">
+                <img src="@/assets/dining-3.jpg" />
+              </div>
+              <h6>An evening</h6>
+              <p style="text-align:left;">
+                22 Feb 2020
+                <span style="float:right;">
+                  2:00-6:00
+                </span>
+              </p>
+            </div></b-col
+          >
+          <b-col class="experiences"
+            ><div class="cards">
+              <div class="crop">
+                <img src="@/assets/dining-3.jpg" />
+              </div>
+              <h6>An evening</h6>
+              <p style="text-align:left;">
+                22 Feb 2020
+                <span style="float:right;">
+                  2:00-6:00
+                </span>
+              </p>
+            </div></b-col
+          >
+          <b-col class="experiences"
+            ><div class="cards">
+              <div class="crop">
+                <img src="@/assets/dining-3.jpg" />
+              </div>
+              <h6>An evening</h6>
+              <p style="text-align:left;">
+                22 Feb 2020
+                <span style="float:right;">
+                  2:00-6:00
+                </span>
+              </p>
+            </div></b-col
+          >
+        </carousel>
       </b-row>
     </b-container>
     <b-row>
@@ -75,7 +98,17 @@
 </template>
 
 <script>
-export default {};
+import carousel from "vue-owl-carousel";
+
+export default {
+  components: { carousel },
+  data: function() {
+    return {
+      left: '<i class="fa fa-angle-left"></i>',
+      right: '<i class="fa fa-angle-right"></i>',
+    };
+  },
+};
 </script>
 
 <style>
@@ -89,6 +122,34 @@ export default {};
   height: 300px;
   margin: -75px 0 0 -100px;
 } */
+
+.bestselling .owl-prev {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  left: -5%;
+  font-size: 18px !important;
+  top: 45%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
+.bestselling .owl-next {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  right: -5%;
+  font-size: 18px !important;
+  font-weight: 100;
+  top: 45%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
 
 .fa-cutlery {
   margin-right: 20px;

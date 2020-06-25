@@ -197,6 +197,9 @@
             offset-md="1"
           >
             <PaymentDescription />
+            <!-- <b-button form="my-form" type="submit" variant="primary"
+              >Submit</b-button
+            > -->
           </b-col>
         </b-row>
       </b-container>
