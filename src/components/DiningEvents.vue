@@ -19,7 +19,7 @@
             0: { items: 1, nav: false, autoplay: true },
             600: { items: 3, nav: true },
           }"
-          :navText="[left, '>']"
+          :navText="[left, right]"
         >
           <b-col
             v-for="content in contents"
@@ -44,13 +44,52 @@ export default {
   props: { contents: Array },
   components: { carousel },
   data: function() {
-    return { left: '<i class="fa fa-angle-left"></i>' };
+    return {
+      left: '<i class="fa fa-angle-left"></i>',
+      right: '<i class="fa fa-angle-right"></i>',
+    };
   },
   methods: {},
 };
 </script>
 
 <style>
+.lightning .owl-prev {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  left: -5%;
+  font-size: 24px;
+  top: 30%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
+.lightning .owl-next {
+  border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 22px !important;
+  position: absolute;
+  right: -5%;
+  font-size: 24px !important;
+  font-weight: 100;
+  top: 30%;
+  background: white !important;
+  color: #707070 !important;
+  display: grid !important;
+}
+
+.lightning .fa-angle-left {
+  font-size: 18px;
+}
+
+.lightning .fa-angle-right {
+  font-size: 18px;
+}
+
 .lightning-content {
   position: absolute;
   top: 60%;
