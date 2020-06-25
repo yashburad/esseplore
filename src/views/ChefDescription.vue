@@ -129,8 +129,13 @@
           <h4 class="font-weight-bold">WINE</h4>
           <b-row>
             <b-col class="pt-3" sm="8">
-              <b-row class="wine">
-                <b-col class="" sm="3">
+              <b-row
+                @click="indexChanger(index)"
+                :class="index == indexnumber ? 'wine' : 'wine1'"
+                v-for="(i, index) in wines"
+                :key="index"
+                style="cursor:pointer;"
+                ><b-col class="" sm="3">
                   <img style="width:25%" src="@/assets/group-2612@3x.png"
                 /></b-col>
                 <b-col class="text-left pl-0" sm="7">
@@ -140,41 +145,13 @@
                 </b-col>
                 <b-col class="text-left pl-0" sm="2">
                   <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
-                </b-col>
-              </b-row>
-              <b-row class="wine1">
-                <b-col class="" sm="3">
-                  <img style="width:25%" src="@/assets/group-2612@3x.png"
-                /></b-col>
-                <b-col class="text-left pl-0" sm="7">
-                  <p class="pt-2">
-                    SAINT EMILION GRAND CRU - Chateau Simard 2009
-                  </p>
-                </b-col>
-                <b-col class="text-left pl-0" sm="2">
-                  <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
-                </b-col>
-              </b-row>
-              <b-row class="wine1">
-                <b-col class="" sm="3">
-                  <img style="width:25%" src="@/assets/group-2612@3x.png"
-                /></b-col>
-                <b-col class="text-left pl-0" sm="7">
-                  <p class="pt-2">
-                    SAINT EMILION GRAND CRU - Chateau Simard 2009
-                  </p>
-                </b-col>
-                <b-col class="text-left pl-0" sm="2">
-                  <h4 class="pt-3 price"><sup>+S$</sup>12</h4>
-                </b-col>
-              </b-row>
+                </b-col></b-row
+              >
             </b-col>
             <b-col sm="4" class="text-center">
               <img style="width:30%" src="@/assets/group-2612@3x.png" />
               <p class="text-left pt-3">
-                A blend of 80% Merlot and 20% Cabernet Franc. The wine is fresh
-                and well balanced with supple texture, lots of pretty red fruit
-                and a good vein of acidity.
+                {{ wineDescription }}
               </p>
             </b-col>
           </b-row>
@@ -229,6 +206,14 @@ export default {
   },
   data() {
     return {
+      wines: [
+        { name: "SAINT EMILION GRAND CRU - Chateau Simard 2009" },
+        { name: "SAINT EMILION GRAND CRU - Chateau Simard 2009" },
+        { name: "SAINT EMILION GRAND CRU - Chateau Simard 2009" },
+      ],
+      indexnumber: 0,
+      wineDescription:
+        "A blend of 80% Merlot and 20% Cabernet Franc. The wine is fresh and well balanced with supple texture, lots of pretty red fruit and a good vein of acidity.",
       add: require("@/assets/dining-3.jpg"),
       description:
         "Singaporean classics infused with love and tender care in sourcing as well as process. Chef Yan cuts no corners, from vegetables hand-cut to the perfect thickness to arduously. Singaporean classics infused with love and tender care in sourcing as well as process. Chef Yan cuts no corners, from vegetables hand-cut to the perfect thickness to arduously",
@@ -240,6 +225,9 @@ export default {
     style(add) {
       var style = 'background-image: url("' + add + '")';
       return style;
+    },
+    indexChanger(i) {
+      this.indexnumber = i;
     },
   },
 };
@@ -261,6 +249,7 @@ export default {
         background-image: linear-gradient(to left, rgba(205, 209, 230, 0), rgba(184, 190, 206, 0.17) 25%)
         border-radius: 5px
         padding: 25px
+        cursor:pointer
 
         .price
             font-weight: 100
@@ -269,6 +258,7 @@ export default {
     .wine1
         border-radius: 5px
         padding: 25px
+        cursor:pointer
 
         .price
             font-weight: 100

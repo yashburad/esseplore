@@ -97,7 +97,6 @@ export default {
     height: 250px
 
   .background
-    height: 350px !important
 
   .page-direction
     padding-top: 40px
