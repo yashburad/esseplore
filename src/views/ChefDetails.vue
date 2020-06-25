@@ -10,22 +10,26 @@
           Chef Martin Yan
         </b-col>
       </b-row>
-      <b-row class="chef-details">
-        <b-col sm="2" offset-md="1">
-          <img class="chef-photo" src="@/assets/dsc-1405.jpg" />
-        </b-col>
-        <b-col class="chef-details1" sm="9">
-          <h4>Chef Shirley Gos</h4>
-          <p>Celebrity Chef. TV Show Host. Founder of Yan Can Cooking School</p>
-          <span>
-            Yan began teaching Chinese cooking for a college extension program.
-            He has hosted over 1,500 episodes of the PBS cooking show Yan Can
-            Cook since 1982. Yan began teaching Chinese cooking for a college
-            extension program. He has hosted over 1,500 episodes of the PBS
-            cooking show Yan Can Cook since 1982.
-          </span>
-        </b-col>
-      </b-row>
+      <b-container>
+        <b-row class="chef-details">
+          <b-col class="text-center" sm="2" offset-md="">
+            <img class="chef-photo" src="@/assets/dsc-1405.jpg" />
+          </b-col>
+          <b-col class="chef-details1 pl-5" sm="9">
+            <h4>Chef Shirley Gos</h4>
+            <p>
+              Celebrity Chef. TV Show Host. Founder of Yan Can Cooking School
+            </p>
+            <span>
+              Yan began teaching Chinese cooking for a college extension
+              program. He has hosted over 1,500 episodes of the PBS cooking show
+              Yan Can Cook since 1982. Yan began teaching Chinese cooking for a
+              college extension program. He has hosted over 1,500 episodes of
+              the PBS cooking show Yan Can Cook since 1982.
+            </span>
+          </b-col>
+        </b-row>
+      </b-container>
     </b-container>
     <b-container fluid style="background:#f4f5f7">
       <HireChefMenu :contents="diningevents" />
@@ -48,7 +52,7 @@ export default {
   components: {
     ImageHeader,
     HireChefMenu,
-    UpcomingDiningEvents
+    UpcomingDiningEvents,
     // Carousel,
   },
   data() {
@@ -56,23 +60,23 @@ export default {
       add: require("@/assets/dining-3.jpg"),
       diningevents: [
         {
-          url: require("@/assets/dining-3.jpg")
+          url: require("@/assets/dining-3.jpg"),
         },
         {
-          url: require("@/assets/dining-3.jpg")
+          url: require("@/assets/dining-3.jpg"),
         },
         {
-          url: require("@/assets/dining-3.jpg")
-        }
-      ]
+          url: require("@/assets/dining-3.jpg"),
+        },
+      ],
     };
   },
   methods: {
     style(add) {
       var style = 'background-image: url("' + add + '")';
       return style;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="sass">
