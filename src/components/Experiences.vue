@@ -9,7 +9,8 @@
           class="w-100"
           :responsive="{
             0: { items: 1, nav: false, autoplay: true },
-            600: { items: 4, nav: true, dots: false },
+            600: { items: 3, nav: true, dots: false },
+            992: { items: 4, nav: true },
           }"
           :navText="[left, right]"
         >

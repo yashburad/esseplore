@@ -68,6 +68,9 @@ export default {
         {
           url: require("@/assets/dining-3.jpg"),
         },
+        {
+          url: require("@/assets/dining-3.jpg"),
+        },
       ],
     };
   },
