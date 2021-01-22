@@ -100,7 +100,7 @@ footer {
 }
 .footer-blogs img {
   width: 100px;
-  /* height: 30.5px; */
+  height: 50px;
   border-radius: 2.5px;
   box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
   margin-right: 10px;

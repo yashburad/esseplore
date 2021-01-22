@@ -11,26 +11,26 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item>
+          <!-- <b-nav-item>
             <router-link to="/explore">Explore</router-link>
           </b-nav-item>
           <b-nav-item>
             <router-link to="/homedining">Home Dining</router-link>
           </b-nav-item>
+          <b-nav-item> -->
+            <!-- <router-link to="/bazaar">Bazaar</router-link>
+          </b-nav-item> -->
           <b-nav-item>
-            <router-link to="/bazaar">Bazaar</router-link>
+            <router-link to="/chefdetails">Chefdetails</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link to="/chefdetails">chefdetails</router-link>
+            <router-link to="/chefdescription">Chefdescription</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link to="/chefdescription">chefdescription</router-link>
+            <router-link to="/summary">Summary</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link to="/summary">summary</router-link>
-          </b-nav-item>
-          <b-nav-item>
-            <router-link to="/paymentsuccess">paymentsuccess</router-link>
+            <router-link to="/paymentsuccess">PaymentSuccess</router-link>
           </b-nav-item>
           <b-nav-item>
             <router-link to="/introduceguests">IntroduceGuests</router-link>

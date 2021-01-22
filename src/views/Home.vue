@@ -7,7 +7,15 @@
           <b-form class="d-inline-flex">
             <b-datepicker class="mr-sm-4 calendar" placeholder="">
               <label style="width:170px;"></label>
+              <b-datepicker
+                class="mr-sm-4 calendar"
+                placeholder=""
+              ></b-datepicker>
             </b-datepicker>
+            <!-- <b-datepicker
+              class="mr-sm-4 calendar"
+              placeholder=""
+            ></b-datepicker> -->
             <b-input-group class=" mb-2 mr-sm-4 mb-sm-0">
               <b-input
                 id="guest inline-form-input-username"
@@ -17,6 +25,39 @@
             <b-button class="search">Search</b-button>
           </b-form>
         </b-col>
+        <!-- <b-col offset-md="2" sm="8" style="margin-top:-20px;  ">
+          <b-form>
+            <b-row>
+              <b-col class="px-0" sm="6">
+                <date-picker
+                  format="D-MMM-YYYY"
+                  v-model="value1"
+                  type="date"
+                  range
+                  placeholder="Select date range"
+                />
+              </b-col>
+              <b-col class="px-0" sm="4">
+                <div class="guest d-flex pl-3 text-left bg-white">
+                  <i class="fa fa-group" style="color:#ff6480"></i>
+                  <h6 class="pl-3 m-0">1 guest</h6>
+                  <div style="float:right">
+                    <span class="ml-3 rounded-circle">- </span>
+                    <span class="ml-3 rounded-circle">+ </span>
+                  </div>
+                </div>
+              </b-col>
+              <b-col class="px-0" sm="2">
+                <b-button class="search">Search</b-button>
+              </b-col>
+              <b-form-spinbutton
+                id="sb-inline"
+                v-model="value"
+                inline
+              ></b-form-spinbutton>
+            </b-row>
+          </b-form>
+        </b-col> -->
       </b-row>
       <DiningEvents :contents="diningevents" />
     </b-container>
@@ -54,6 +95,8 @@
 </template>
 
 <script>
+// import DatePicker from "vue2-datepicker";
+// import "vue2-datepicker/index.css";
 // @ is an alias to /src
 import ImageHeader from "@/components/ImageHeader.vue";
 import DiningEvents from "@/components/DiningEvents.vue";
@@ -71,9 +114,12 @@ export default {
     HireAChef,
     HomeChef,
     ExploreCuisines,
+    // DatePicker,
   },
   data() {
     return {
+      arrow: '<i class="fa fa-arrow-right" aria-hidden="true"></i>',
+      value1: [new Date(2019, 9, 8), new Date(2019, 9, 19)],
       add: require("@/assets/dining-3.jpg"),
       hire: require("@/assets/dsc-1400.jpg"),
       content: "Authentic Dining Experiences",
@@ -111,6 +157,37 @@ export default {
 </script>
 
 <style>
+.rounded-circle {
+  border: 1px solid;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+}
+
+.guest {
+  height: 50px;
+  box-shadow: 0 3.5px 3px 0 rgba(12, 20, 61, 0.11);
+  border-radius: 5px;
+  align-items: center;
+  width: 80%;
+}
+
+.mx-icon-calendar {
+  left: 8px !important;
+  right: auto;
+  color: #ff6480;
+}
+
+.mx-input {
+  padding: 6px 30px 6px 40px !important;
+}
+
+.mx-input-wrapper:hover .mx-icon-clear + .mx-icon-calendar {
+  display: block !important;
+}
+
 .chef {
   background-color: lightsalmon;
   z-index: 0;
